@@ -1,3 +1,5 @@
+# 1. AWS Glue
+
 # Serverless data pipelines using Amazon Glue to move data between AWS S3 buckets 
 
 This activity can consist of the below steps.
@@ -98,5 +100,56 @@ job.commit()
 
 ```
 
+# 2. Loading Kaggle dataset to AWS S3 using Boto3
 
 
+This activity intends to download the dataset from the Kaggle site using the available Kaggle API and load the data to an AWS S3 bucket with the help of python Boto3.
+
+The entire activity of fetching data from Kaggle to S3 has been broken down as different steps. Which includes :
+
+* Step 1: Installation of Kaggle CLI
+* Step 2: Installation of AWS CLI
+* Step 3: Installation of Boto3
+* Step 4: AWS S3 bucket creation using Python Boto3
+* Step 5: Kaggle Dataset download
+* Step 6: File uploads to AWS S3 using Boto3
+
+### Step 1: Installation of Kaggle CLI
+
+```
+pip install kaggle
+
+```
+### Step 2: Installation of AWS CLI
+
+```
+pip install awscli
+
+```
+### Step 3: Installation of Boto3
+
+```
+pip install boto3
+
+```
+### Step 4: AWS S3 bucket creation using Python Boto3
+
+```
+import boto3
+s3resource=boto3.client('s3','us-east-1')
+s3resource.create_bucket(Bucket='filetransfers3tords')
+```
+### Step 5: Kaggle Dataset download
+
+```
+kaggle datasets list
+kaggle datasets download dataset name -p destination -unzip
+```
+### Step 6: File uploads to AWS S3 using Boto3
+
+```
+s3resource.upload_file(KaggleDatasetname,bucket_name,S3storedkaggledatasetname)
+
+```
+
+Note: For Detailed explanation of above activity, visit my blog at:  https://medium.com/@antonysruthy11/loading-kaggle-dataset-to-aws-s3-using-boto3-50af3e015fb2
