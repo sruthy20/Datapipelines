@@ -1,6 +1,8 @@
 ![awsnw](https://user-images.githubusercontent.com/72220952/100804872-7ec1da80-3425-11eb-8e5a-708862ed0957.jpg)
 
+The below section includes my works done as part of exploring the diverse opportunities of using various AWS services. Amazon Web Services provide reliable and scalable cloud computing solutions. It is one of the world's most adopted cloud platform for various solutions. In this section, I have attempted to explore few of the Data Engineering related services provided by amazon web service.
 
+Let's explore the activities done as part of this learning experience.
 
 # 1. Deliver streaming data to S3 bucket using AWS Kinesis Firehose
 
